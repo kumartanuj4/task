@@ -1,10 +1,10 @@
 <div class="overlay">
   <div class="container">
-      <div class="row" *ngFor = "let teach of teachers">
+      <div class="row" *ngFor = "let stuu of students">
           <h1 style="text-align: center;">Web Based Application</h1>
-          <h3>Teachers Name: <i>{{teach.name}}</i></h3>
-          <h3>Specialization: <i>{{teach.Specialization}}</i></h3>
-          <h4>StudentName: <b>{{teach.StudentName}}</b></h4>
+          <h3>Name: <i>{{stuu.name}}</i></h3>
+          <h3>Teachers Name: <b>{{stuu.TeacherName}}</b></h3>
+          <h3>Teachers Specialized In: <b>{{stuu.Specialization}}</b></h3>
       </div>
   </div>
   <div class="bottom-container">

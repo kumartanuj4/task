@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { TeacherService } from '../teacher.service';
+import { Teacher } from '../teachers';
+
 
 @Component({
   selector: 'app-details',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
 
-  constructor() { }
+  teachers: Teacher[];
+
+  constructor( private teacherService:  TeacherService) { }
 
   ngOnInit() {
+    this.getteacher();
+  }
+
+  getteacher(): void {
+    this.teachers = this.teacherService.getList();
+  }
+
+  previousState() {
+    window.history.back();
   }
 
 }

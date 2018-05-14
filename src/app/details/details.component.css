@@ -1,0 +1,15 @@
+.overlay {
+    /* position: absolute; */
+    /* background-color:rgb(172, 171, 178); */
+    width: auto;
+    min-height: 100vh;
+    /*max-height: 509px; */
+    /* height: 60%; */
+    z-index: -5;
+    background-color: rgb(255,255,255,0.8);
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    /* text-align: center; */
+    margin: 0 auto;
+}

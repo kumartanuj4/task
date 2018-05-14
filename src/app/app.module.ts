@@ -6,7 +6,11 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { DetailsComponent } from './details/details.component';
+import { DetailsComponent1 } from './details/details.component.1';
 import { ForgotComponent } from './forgot/forgot.component';
+
+import { TeacherService } from '../app/teacher.service';
+import { StudentService } from './student.service';
 
 
 @NgModule({
@@ -15,12 +19,13 @@ import { ForgotComponent } from './forgot/forgot.component';
     RegisterComponent,
     LoginComponent,
     DetailsComponent,
+    DetailsComponent1,
     ForgotComponent
   ],
   imports: [
     BrowserModule, AppRoutingModule
   ],
-  providers: [],
+  providers: [TeacherService, StudentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
