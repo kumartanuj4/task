@@ -1,0 +1,62 @@
+<script>
+  function validateForm() {
+    var x = document.forms["myForm"]["username"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+}
+</script>
+<!-- <div class="wrap"> -->
+        <div class="overlay">
+        <div class="container">
+            <div class="row">
+                <h2 style="text-align:center">Web Based Application</h2>
+                <div class="vl">
+                  <span class="vl-innertext">or</span>
+                </div>
+                <div class="col">
+                    <div>
+                        <p style="font-style:initial; font-weight:bolder;">Sign-in as Teacher</p>
+                    </div>
+                    <form name="myForm" action="details" onsubmit="return validateForm()">
+                    <input type="text" name="username" placeholder="username">
+                    <input id="field_pwd1" title="Password must contain at least 6 characters, including UPPER/lowercase and numbers." type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd1" placeholder="password">
+                    <div class="form-group">
+                        <label for="sel1">Select Specialization (select one):</label>
+                        <select class="form-control" id="sel1">
+                          <option>Robotics</option>
+                          <option>Machine Learning</option>
+                          <option>SAAS</option>
+                          <option>Digital Marketing</option>
+                        </select>
+                    </div>
+                    <input type="submit" value="Login" class="btn btn-success">
+                    </form>
+                  </div>
+                  <div class="col">
+                      <div>
+                          <p style="font-style:initial; font-weight:bolder;">Sign-in as Student</p>
+                      </div>
+                    <form name="myForm" action="details" onsubmit="return validateForm()">
+                    <input id="field_username" title="Username must not be blank and contain only letters, numbers and underscores." type="text" required pattern="\w+" name="username" placeholder="username">
+                    <input id="field_pwd1" title="Password must contain at least 6 characters, including UPPER/lowercase and numbers." type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd1" placeholder="password">
+                    <input type="submit" value="Login" class="btn btn-success">
+                    </form>
+                  </div>
+                  
+                </div>
+            
+            <div class="bottom-container">
+              <div class="row">
+                <div class="col btn btn-primary">
+                    <a routerLink="/register" style="color:white" class="btn">Sign up</a>
+                </div>
+                <div class="col btn btn-danger">
+                  <a  routerLink="/forgot" style="color:white" class="btn">Forgot password?</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        <!-- </div> -->

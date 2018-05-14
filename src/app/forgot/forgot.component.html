@@ -1,0 +1,29 @@
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
+    else {
+      alert('otp is sent to your email account, please take a look')
+    }
+}
+
+</script>
+<div class="overlay">
+    <div class="container">
+        <div class="row">
+            <h2 style="text-align:center">Web Based Application</h2>
+              <div class="col">
+                  <form name="myForm" action="login" onsubmit="return validateForm();" >
+                <input type="email" name="email" placeholder="email" required>
+                <input type="username" name="username" placeholder="username" required>
+                <input type="submit" value="Reset password" class="btn btn-success">
+                </form>
+              </div>
+      </div>
+      </div>
+    <!-- </div> -->

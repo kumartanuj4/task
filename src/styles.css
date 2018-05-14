@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0px;
+    padding: 0px;
+     background-image: url('/assets/img/bag.jpg');
+     background-position: center center;
+     background-size: cover;
+     background-position: center center;
+     background-size: cover;
+     min-height:100vh;
+     max-height: 999px;
+     overflow: hidden;
+     position: relative;
+     width: 100%;
+     z-index: -10;
+}
