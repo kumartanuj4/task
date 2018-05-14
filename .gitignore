@@ -1,2 +1,3 @@
-.nodemodules
-.e2e
+nodemodules/
+e2e/
+package-lock.json
